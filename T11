@@ -1,0 +1,24 @@
+# Program to manipulate strings
+
+# Read the input string from the user
+input_string = input("Enter a string: ")
+
+# Make each alternate character uppercase or lowercase
+output_string = ""
+for i, c in enumerate(input_string):
+    if i % 2 == 0:
+        output_string += c.lower()
+    else:
+        output_string += c.upper()
+print("Alternate case string:", output_string)
+
+# Make each alternate word lowercase and uppercase
+words = input_string.split()
+output_words = []
+for i, word in enumerate(words):
+    if i % 2 == 0:
+        output_words.append(word.lower())
+    else:
+        output_words.append(word.upper())
+output_string = " ".join(output_words)
+print("Alternate word case string:", output_string)
